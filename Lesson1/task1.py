@@ -8,4 +8,3 @@ _float = float(input("Введи float:"))
 print("float:", _float)
 _list = list(input("Введи  list:"))
 print("list:", _list)
-
