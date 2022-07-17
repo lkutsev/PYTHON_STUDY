@@ -8,4 +8,5 @@ print('вариант 1: %02d:%02d:%02d'%(hh,mm,ss))
 hh = s//3600
 mm = (s%3600)/60
 ss = s%60
-print('вариант 2: %02d:%02d:%02d'%(hh,mm,ss))
+print('вариант 1: %02d:%02d:%02d'%(hh,mm,ss))
+##print(f'{s:%H:%M:%S}')
