@@ -17,3 +17,4 @@ while (1):
     my_list.append(new)
     my_list.sort(reverse=True)
     print('Новый рейтинг:' + str(my_list))
+
