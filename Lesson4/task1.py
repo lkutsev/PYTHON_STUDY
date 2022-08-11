@@ -6,7 +6,7 @@ from sys import argv
 
 _, hours, stavka, bonus = argv
 try:
-    result = (int(hours) * int(stavka) + int(bonus))
+    result = (int(hours) * int(stavka)) + int(bonus)
     print(result)
 except Exception as err:
     print('ошибка: ', err)

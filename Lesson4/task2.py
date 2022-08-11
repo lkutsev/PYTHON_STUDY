@@ -11,7 +11,8 @@ print('l1:', l1)
 j = reduce(max, l1) + 1
 res = []
 for i in l1:
-    if i > j: res.append(i)
+    if i > j:
+        res.append(i)
     j = i
 print('res:', res)
 res2 = [l1[x] for x in range(1, len(l1)) if l1[x] > l1[x - 1]]
