@@ -12,3 +12,19 @@
 # Пример json-объекта:
 # [{"firm_1": 5000, "firm_2": 3000, "firm_3": 1000}, {"average_profit": 2000}]
 # Подсказка: использовать менеджер контекста.
+import json
+
+f = open("tsk7.txt", "r", encoding="utf-8")
+r = []
+s = {}
+avrg = 0
+for j in f:
+    i = j.split(' ')
+    s[i[0]] = int(i[2]) - int(i[3])
+    avrg += s[i[0]]
+r.append(s)
+r.append({'average_profit': sum(r[0].values()) / len(r[0].values())})
+print(r)
+f.close()
+with open("my_file.json", "w") as write_f:
+    json.dump(r, write_f)

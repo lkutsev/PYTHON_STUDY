@@ -7,3 +7,13 @@
 # Физика: 30(л) — 10(лаб)
 # Физкультура: — 30(пр) —
 # Пример словаря: {“Информатика”: 170, “Физика”: 40, “Физкультура”: 30}
+import re
+from functools import reduce
+
+f = open("tsk6.txt", "r", encoding="utf-8")
+r = {}
+for i in f:
+    l = i.split(':')
+    r[l[0]] = sum([int(x) for x in re.findall('\d+', l[1])])
+print(r)
+f.close()
