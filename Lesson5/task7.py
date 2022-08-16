@@ -23,7 +23,7 @@ for j in f:
     s[i[0]] = int(i[2]) - int(i[3])
     avrg += s[i[0]]
 r.append(s)
-r.append({'average_profit': sum(r[0].values()) / len(r[0].values())})
+r.append({'average_profit': sum(r[0].values()) / (len(r[0].values())-1)})
 print(r)
 f.close()
 with open("my_file.json", "w") as write_f:
